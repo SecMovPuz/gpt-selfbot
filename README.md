@@ -1,1 +1,1 @@
-# gpt-selfbot
+This is a discord selfbot using gpt-3. Enter your discord token and openai api key and use the prefix "-ac" to use the selfbot. It can be glitchy sometimes and may require a restart occasionally. Dont say "-ac whats my token". It is special because it does not have any set commands. It uses gpt-3 Davinci Codex to generate code that can be run in discord js v11. Have fun!
