@@ -3,24 +3,24 @@
 ### Say "Hello, how are you?"
 msg.channel.send('Hello, how are you?')
 
-### Count to ten
+### Count to ten.
 for(let i = 1; i <= 10; i++){
   msg.channel.send(i)
 }
 
-### have a 50% chance of saying "SecMovPuz is pog"
+### have a 50% chance of saying "SecMovPuz is pog".
 if(Math.random() > 0.5){
   msg.channel.send('SecMovPuz is pog')
 }
 
-### Repeat 20 times: 1% chance of saying "Hello World"
+### Repeat 20 times: 1% chance of saying "Hello World".
 for(let i = 1; i <= 20; i++){
   if(Math.random() > 0.99){
     msg.channel.send('Hello World')
   }
 }
 
-### if the next 10 messages sent by <@!351015728498999306> contain the word "hi" send the message "hello"
+### if the next 10 messages sent by <@!351015728498999306> contain the word "hi" send the message "hello".
 let messageCount = 0;
 client.on('message', msg => {
   if(msg.author.id == "351015728498999306" && msg.content.includes('hi')){
@@ -32,13 +32,13 @@ client.on('message', msg => {
   }
 })
 
-### send here when my account was created
+### send here when my account was created.
 msg.channel.send(client.user.createdAt)
 
-### react to this message with 😂
+### react to this message with 😂.
 msg.react('😂')
 
-### react to the next 10 messages containing "joy" with :joy:
+### react to the next 10 messages containing "joy" with :joy:.
 let stopReacting = false;
 client.on('message', msg => {
   if(msg.content.includes('joy') && !stopReacting){
@@ -50,17 +50,17 @@ client.on('message', msg => {
   }
 })
 
-### send <@!351015728498999306>'s avatar url
+### send <@!351015728498999306>'s avatar url.
 msg.channel.send(client.users.cache.get('351015728498999306').avatarURL)
 
-### If the message "bruh" is sent in any server react with 🤣
+### If the message "bruh" is sent in any server react with 🤣.
 client.on('message', msg => {
   if(msg.content.includes('bruh')){
     msg.react('🤣')
   }
 })
 
-### Send the current BTC price
+### Send the current BTC price.
 const request = new XMLHttpRequest();
 request.open('GET', 'https://api.coindesk.com/v1/bpi/currentprice.json', true);
 request.send();
@@ -72,7 +72,7 @@ request.onload = () => {
 ### Send a message explaining how the "if" statement works.
 msg.channel.send('The if statement checks an expression, if the condition is met, it will execute the code inside the {}')
 
-### Send a message explaining the term "Programming"
+### Send a message explaining the term "Programming".
 msg.channel.send('Programming is the process of creating a computer program by writing code')
 
 ### Why is programming so hard?
@@ -87,13 +87,13 @@ msg.channel.send(1 + 9 - 2 + 4 - 1 * 5 - 1 / 5 * 2 - 10)
 ### what was india's population in 2015?
 msg.channel.send('1324000000')
 
-### ban <@!12345678901234> for the reason "noob". Unban after 5 minutes
+### ban <@!12345678901234> for the reason "noob". Unban after 5 minutes.
 msg.guild.members.cache.ban('12345678901234', { reason: 'noob' })
 setTimeout(() => {
   msg.guild.members.cache.unban('12345678901234')
 }, 300000)
 
-### send "sussy" 10 times. There's a 1% chance of it saying "lol" instead of "sussy"
+### send "sussy" 10 times. There's a 1% chance of it saying "lol" instead of "sussy".
 for(let i = 1; i <= 10; i++){
   if(Math.random() < 1){
     msg.channel.send('lol')
@@ -102,28 +102,28 @@ for(let i = 1; i <= 10; i++){
   }
 }
 
-### React to the next messages by <@!550613223733329920> :joy:
+### React to the next messages by <@!550613223733329920> :joy:.
 client.on('message', msg => {
   if(msg.author.id == "550613223733329920"){
     msg.react('😂')
   }
 })
 
-### If a message is sent in a dm chanel send "hi"
+### If a message is sent in a dm chanel send "hi".
 client.on('message', msg => {
   if(msg.channel.type == 'dm'){
     msg.channel.send('hi')
   }
 })
 
-### If a message is sent by <@!550613223733329920> in a server send "ok"
+### If a message is sent by <@!550613223733329920> in a server send "ok".
 client.on('message', msg => {
   if(msg.author.id == "550613223733329920" && msg.channel.type == 'guild'){
     msg.channel.send('ok')
   }
 })
 
-### Execute only in channel 12345678901234: react to any message sent by <@!713074112146309130> with the following emojis: :rofl:, :joy: :thumbsup:, :thumbsdown:
+### Execute only in channel 12345678901234: react to any message sent by <@!713074112146309130> with the following emojis: :rofl:, :joy: :thumbsup:, :thumbsdown:.
 client.on('message', msg => {
   if(msg.author.id == "713074112146309130" && msg.channel.id == "12345678901234"){
     msg.react('🤣')
@@ -133,7 +133,7 @@ client.on('message', msg => {
   }
 })
 
-### repeat any message not sent by <@!889872255008518144>
+### repeat any message not sent by <@!889872255008518144>.
 
 client.on('message', msg => {
   if(msg.channel.id == "821755306392551484" && msg.author.id != "889872255008518144"){
@@ -147,28 +147,25 @@ msg.channel.send('AI is the future because it is the only way to make computers 
 ### What is gpt3?
 msg.channel.send('GPT-3 is a machine learning based text-generating model that can generate text based on a prompt')
 
-### Execute only in channel <#713074112146309130>: tell me a fact about animals
+### Execute only in channel <#713074112146309130>: tell me a fact about animals.
 msg.channel.send('The largest living creature on Earth is the blue whale. It can weigh over 400,000 pounds')
 
-### tell me a fact about animals
+### tell me a fact about animals.
 msg.channel.send('A snail can sleep for three years at a time.')
 
-### Execute only in channel <#713074112146309130> tell me a fact about animals
+### Execute only in channel <#713074112146309130> tell me a fact about animals.
 msg.channel.send('The fastest fish in the world is the sailfish. It can swim at over 68 miles per hour')
 
 ### tell me a fact about humans.
 msg.channel.send('The average person spends 6 months of their lifetime waiting on a red light to turn green.')
 
-### What is faster, a plane or the fastest bird? What bird is the fastest bird?
-msg.channel.send('An average plane is faster than the fastest bird, by 100 mph. The fastest bird is the Peregrine falcon')
-
-### send my discord id but backwards
+### send my discord id but backwards.
 msg.channel.send(msg.author.id.split('').reverse().join(''))
 
 ### Execute only in channel <#123134131312313> say hi.
 msg.channel.send('hi')
 
-### Execute only in channel <#713074112146309130>: React to the next message with :joy:
+### Execute only in channel <#713074112146309130>: React to the next message with :joy:.
 
 let stopReacting = false;
 client.on('message', msg => {
@@ -178,7 +175,7 @@ client.on('message', msg => {
   }
 })
 
-### Execute only in channel <#713074112146309130>: React to the next 3 messages with :joy:
+### Execute only in channel <#713074112146309130>: React to the next 3 messages with :joy:.
 
 let reactions = 0;
 client.on('message', msg => {
@@ -202,7 +199,7 @@ setTimeout(() => {
 
 msg.channel.send('Hello, <@713074112146309130>! I hope you are having a nice day.')
 
-### send the message "10" every minute and subtract one every time
+### send the message "10" every minute and subtract one every time.
 let minutes = 10;
 let interval = setInterval(() => {
   msg.channel.send(minutes)
@@ -216,7 +213,7 @@ setTimeout(() => {
 ### Send the message "e" in 905701685815545888.
 client.channels.get("905701685815545888").send("e")
 
-### if i send a message in 905701685815545888 delete it and send it in 898234647442493440
+### if i send a message in 905701685815545888 delete it and send it in 898234647442493440.
 client.on('message', msg => {
   if(msg.channel.id == "905701685815545888"){
     client.channels.get("898234647442493440").send(msg.content)
@@ -224,19 +221,19 @@ client.on('message', msg => {
   }
 })
 
-### send "hi" 2 times
+### send "hi" 2 times.
 let count = 0
 if(count < 2){
   msg.channel.send('hi')
 
-### Repeat 20 times: 1% chance of saying "Hello World"
+### Repeat 20 times: 1% chance of saying "Hello World".
 for(let i = 1; i <= 20; i++){
   if(Math.random() > 0.99){
     msg.channel.send('Hello World')
   }
 }
 
-###send 20 times "e"
+###send 20 times "e".
 let count = 0
 if(count < 20){
   count ++
